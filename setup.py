@@ -60,7 +60,9 @@ udunits_ext = Extension('cf_units._udunits2',
                         **extra_extension_args)
 
 if cythonize:
-    [udunits_ext] = cythonize(udunits_ext, compiler_directives={'linetrace': True})
+    [udunits_ext] = cythonize(udunits_ext,
+                              compiler_directives={'linetrace': True})
+
 
 cmdclass = {}
 cmdclass.update(versioneer.get_cmdclass())
